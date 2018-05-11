@@ -16,7 +16,7 @@ class Profiles extends Component {
   };
 
   componentDidMount() {
-    this.loadProfiles("5aedeb70832afe179eebd366"); //Remove hard coded profile//
+    this.loadProfiles("5af59df093604d5fd2f63c02"); //Remove hard coded profile//
   }
 
   loadProfiles = id => {
@@ -45,12 +45,13 @@ class Profiles extends Component {
     event.preventDefault();
     console.log ("was clicked");
     {
-      API.updateProfile("5aedeb70832afe179eebd366", {
+    API.updateProfile("5af59df093604d5fd2f63c02", {
+        
         //Remove hard code id//
         kidName: this.state.kidName,
         reward: this.state.reward
       })
-        .then(res => this.loadProfiles("5aedeb70832afe179eebd366")) //Remove hard coded profile//
+        .then(res => this.loadProfiles("5af59df093604d5fd2f63c02")) //Remove hard coded profile//
         .catch(err => console.log(err));
     }
   };
