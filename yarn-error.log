@@ -31,7 +31,9 @@ npm manifest:
     "scripts": {
       "server": "node server.js",
       "client": "node scripts/start-client.js",
-      "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+      "start": "concurrently \"client: npm install && npm run build\" \"npm run server\"",
+      "start:dev": "concurrently \"nodemon server.js\" \"npm run client\"",
+      "client:install": "cd client && npm install",
       "build": "node scripts/build.js",
       "test": "echo \"Error: no test specified\" && exit 1",
       "seed": "node scripts/seedDB.js"
@@ -4210,8 +4212,8 @@ Trace:
   Error: Command failed.
   Exit code: 127
   Command: sh
-  Arguments: -c concurrently "nodemon server.js" "npm run client"
-  Directory: /Users/yvonnereichenbach/Documents/GitHub/Start-to-Finish/start2finish
+  Arguments: -c concurrently "client: npm install && npm run build" "npm run server"
+  Directory: /Users/yvonnereichenbach/Documents/GitHub/start2finish-final
   Output:
   
       at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
