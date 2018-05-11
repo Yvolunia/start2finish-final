@@ -1,21 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Missions from "./pages/MissionSetUp";
+import Profiles from "./pages/KidProfile";
+// import Login from "./pages/Login";
+import Kids from "./pages/KidHome";
+// import Signup from "./pages/SignUp";
+// import Tracker from "./pages/AdultTracker";
+// import Home from "./pages/HomeScreen";
+// import Nav from "./components/Nav";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+
+const App = () => (
+  <Router>
+    <div>
+      {/* <Nav /> */}
+      <Switch>
+        <Route exact path="/" component={Profiles} />
+        <Route exact path="/profile" component={Profiles} />
+        <Route exact path="/missions/:id" component={Missions} />
+        <Route exact path="/kid" component={Kids} />
+        {/* <Route exact path="/SignUp" component={SignUp} /> */}
+        <Route exact path="/missions" component={Missions} />
+        {/* <Route exact path="/Tracker" component={Tracker} />
+        <Route exact path="/kid" component={Kid} /> */}
+            
+      </Switch>
+    </div>
+  </Router>
+);
 
 export default App;
