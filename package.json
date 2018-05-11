@@ -15,7 +15,7 @@
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
-    "start": "concurrently \"yarn client:install\" \"yarn build\" \"yarn server\"",
+    "start": "yarn client:install && yarn build && yarn server",
     "start:dev": "concurrently \"nodemon server.js\" \"yarn client\"",
     "client:install": "cd client && yarn install",
     "build": "node scripts/build.js",
