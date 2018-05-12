@@ -13,7 +13,7 @@
     "react-router-dom": "^4.2.2"
   },
   "scripts": {
-    "prestart": "npm run seed && cd client && npm install && npm run build",
+    "prestart": "cd client && npm install && npm run build",
     "start": "node server.js",
     "start:dev": "concurrently \"nodemon server.js\" \"cd client && npm start\"",
     "seed": "node scripts/seedDB.js"
