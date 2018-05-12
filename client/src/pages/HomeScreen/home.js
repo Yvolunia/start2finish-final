@@ -10,7 +10,7 @@ return (
 <Row>
 <Col size="md-12 sm-12">
 <Jumbotron>
-  <img src="../../../../start2finishLOGO.png"> </img>
+  <img src="../../../start2finishLOGO.png"> </img>
 </Jumbotron>
 </Col>
 </Row>
