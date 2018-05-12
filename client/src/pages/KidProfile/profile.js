@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
 import Jumbotron from "../../components/Jumbotron";
-import Button from "../../components/Button";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
@@ -107,12 +106,6 @@ class Profiles extends Component {
                       </strong>
                     </Link>
                     {/* <DeleteBtn onClick={() => this.deleteProfiles(kidName._id)} /> */}
-                    <Button>
-                      <Link to={{ 
-                        pathname:"/kid/" + this.state.parentID, 
-                        state: profile
-                      }}>{profile.kidName}'s Missions </Link>
-                    </Button>
                   </ListItem>
                 ))}
               </List>

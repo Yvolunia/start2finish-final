@@ -21,8 +21,8 @@ const App = () => (
         <Route exact path="/kid" component={Kids} />
         {/* <Route exact path="/SignUp" component={SignUp} /> */}
         <Route exact path="/missions" component={Missions} />
-        {/* <Route exact path="/Tracker" component={Tracker} /> */}
-        <Route exact path="/kid/:id" component={Kids} /> 
+        {/* <Route exact path="/Tracker" component={Tracker} />
+        <Route exact path="/kid" component={Kid} /> */}
             
       </Switch>
     </div>
