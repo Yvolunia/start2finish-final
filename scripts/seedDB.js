@@ -6,47 +6,9 @@ mongoose.connect(
 	process.env.MONGODB_URI || "mongodb://localhost/start_to_finish");
 
 const userSeed = [{
-		"adultName": "Mom",
-		"password": "mom12345",
-		"profiles": [{
-				"kidName": "Jack",
-				"reward": "5 hours video games",
-				"missions": [{
-						"missionName": "Complete homework by 7:00 pm",
-						"completed": 0
-					},
-					{
-						"missionName": "Mow lawn",
-						"completed": 0
-					},
-					{
-						"missionName": "Feed dogs",
-						"completed": 0
-					}
-				]
-			},
 
-			{
-				"kidName": "Beverly",
-				"reward": "5 hours video games",
-				"missions": [{
-						"missionName": "Complete homework by 7:00 pm",
-						"completed": 0
-					},
-					{
-						"missionName": "Wash dishes",
-						"completed": 0
-					},
-					{
-						"missionName": "Feed snake",
-						"completed": 0
-					}
-				]
-			}
-		]
-	},
 	{
-		"adultName": "Dad",
+		"adultName": "Mr Jones",
 		"password": "dad12345",
 		"profiles": [{
 				"kidName": "Bob",
