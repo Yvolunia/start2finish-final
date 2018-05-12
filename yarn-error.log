@@ -29,13 +29,9 @@ npm manifest:
       "react-router-dom": "^4.2.2"
     },
     "scripts": {
-      "server": "node server.js",
-      "client": "node scripts/start-client.js",
-      "start": "concurrently \"client: npm install && npm run build\" \"npm run server\"",
-      "start:dev": "concurrently \"nodemon server.js\" \"npm run client\"",
-      "client:install": "cd client && npm install",
-      "build": "node scripts/build.js",
-      "test": "echo \"Error: no test specified\" && exit 1",
+      "prestart": "cd client && npm install && npm run build",
+      "start": "node server.js",
+      "start:dev": "concurrently \"nodemon server.js\" \"cd client && npm start\"",
       "seed": "node scripts/seedDB.js"
     }
   }
@@ -4210,9 +4206,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 127
+  Exit code: 1
   Command: sh
-  Arguments: -c concurrently "client: npm install && npm run build" "npm run server"
+  Arguments: -c node server.js
   Directory: /Users/yvonnereichenbach/Documents/GitHub/start2finish-final
   Output:
   
